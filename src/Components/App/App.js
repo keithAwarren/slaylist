@@ -3,7 +3,6 @@ import './App.css';
 import SearchBar from "../SearchBar/SearchBar";
 import SearchResults from "../SearchResults/SearchResults";
 import Playlist from "../Playlist/Playlist";
-import TrackList from "../TrackList/TrackList";
 
 class App extends React.Component {
   constructor(props) {
@@ -23,23 +22,34 @@ class App extends React.Component {
         id: 2
       },
     ],
-        playlistName: "Example Playlist",
-        playlistTracks: [
-          {
-          name: "Example Playlist Track Name 3",
-          artist: "Example Playlist Track Artist 3",
-          album: "Example Playlist Track Album 3",
-          id: 3,
-          },
-          {
-          name: "Example Playlist Track Name 4",
-          artist: "Example Playlist Track Artist 4",
-          album: "Example Playlist Track Album 4",
-          id: 4,
-          },
-        ],
+      playlistName: "Example Playlist",
+      playlistTracks: [
+      {
+        name: "Example Playlist Track Name 3",
+        artist: "Example Playlist Track Artist 3",
+        album: "Example Playlist Track Album 3",
+        id: 3,
+      },
+      {
+        name: "Example Playlist Track Name 4",
+        artist: "Example Playlist Track Artist 4",
+        album: "Example Playlist Track Album 4",
+        id: 4,
+      },
+    ],
   };
+  this.addTrack = this.addTrack.bind(this);
 }
+
+  addTrack(track) {
+    const foundTrack = this.state.playlistTracks.find(
+      (playlistTrack) => playlistTrack.id === track.id
+    );
+    const newTrack = this.state.playlistTracks.concat(track);
+    foundTrack 
+      ? console.log("Track already exists!") 
+      : this.setState({playlistTracks: newTrack})
+  }
 
 
   render() {
@@ -50,7 +60,10 @@ class App extends React.Component {
 	        <div className="App">
             <SearchBar />
 		        <div className="App-playlist">
-              <SearchResults searchResults={this.state.searchResults} />	
+              <SearchResults 
+                searchResults={this.state.searchResults}
+                onAdd={this.addTrack}
+              />	
               <Playlist 
                 playlistName={this.state.playlistName} 
                 playlistTracks={this.state.playlistTracks}
