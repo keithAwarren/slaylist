@@ -1,4 +1,5 @@
 import React from "react";
+import "./SearchResults"
 
 class SearchResults extends React.Component {
     render () {
