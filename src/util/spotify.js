@@ -37,10 +37,38 @@ const Spotify = {
             name: tracks.name,
             artist: tracks.artists[0].name,
             album: tracks.album.name,
-            uri: tracks.uri
+            uri: tracks.uri,
         }))
        });
-    }
+    },
+
+    savePlaylistName(name, trackURIs) {
+        if (!name || !trackURIs) {
+            return;
+        }
+        let accesToken = Spotify.getAccessToken();
+        const headers = { Authorization: `Bearer ${accesToken}` }
+        let userID = "";
+        return fetch("https://api.spotify.com/v1/me", {headers: headers})
+        .then((response) => response.json())
+        .then((jsonResponse) => {
+            userID = jsonResponse.id
+            return fetch(`https://api.spotify.com/v1/users/${userID}/playlists`, {
+                headers: headers,
+                method: "POST",
+                body: JSON.stringify({name: name})
+            })
+                .then((response) => response.json())
+                .then((jsonResponse) => {
+                    const playlistID = jsonResponse.id;
+                    return fetch(`https://api.spotify.com/v1/playlists/${playlistID}/tracks`, {
+                        headers: headers,
+                        method: "POST",
+                        body: JSON.stringify({uris: trackURIs}),
+                    })
+                })
+        });
+    },
 };
 
 export default Spotify;
