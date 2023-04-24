@@ -6,7 +6,7 @@
     width: 37%;
     max-height: 950px;
     padding: 2.27rem 1.16rem;
-    background-color: rgba(1, 12, 63, 0.7);
+    background-color: rgba(4, 35, 31, 0.7);
     box-shadow: 0 4px 2px 2px #000000;
   }
   
@@ -28,7 +28,7 @@
     border-radius: 54px;
     border-width: 0px;
     margin-top: 1.27rem;
-    background-color: #6c41ec;
+    background-color: #41dbec;
     text-align: center;
     font-size: .83rem;
     transition: background-color .25s;
@@ -37,7 +37,7 @@
   }
   
   .Playlist-save:hover {
-    background-color: rgba(108, 65, 233, .7);
+    background-color: rgba(65, 233, 225, 0.7);
   }
   
   ::-webkit-scrollbar {

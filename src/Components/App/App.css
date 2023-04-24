@@ -10,7 +10,7 @@ html {
 
 h1 {
   padding: .77rem 0;
-  background-color: #010c3f;
+  background-color: #04272b;
   text-align: center;
   font-family: 'Poppins', sans-serif;
   font-size: 1.88rem;
@@ -18,7 +18,7 @@ h1 {
 }
 
 h1 .highlight {
-  color: #6c41ec;
+  color: #41ecd2;
 }
 
 h2 {
@@ -29,7 +29,7 @@ h2 {
 .App {
   height: 100%;
   padding: 0 17% 10% 17%;
-  background-image: url('/background_photo_desktop.jpg');
+  background-image: url('/rupam-dutta-5OMff2RDqPs-unsplash.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

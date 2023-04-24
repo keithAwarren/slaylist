@@ -5,7 +5,7 @@ import Track from "../Track/Track"
 
 const TrackList = (props) => {
   return (
-    <div className="TrackList">
+    <div className="Track-list">
       {props.tracks.map((track) => {
         return (
           <Track
