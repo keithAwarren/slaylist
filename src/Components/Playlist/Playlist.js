@@ -7,7 +7,7 @@ const Playlist = (props) => {
       props.onNameChange(event.target.value);
     },
     [props.onNameChange]
-  );
+  ); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <div className="Playlist">
