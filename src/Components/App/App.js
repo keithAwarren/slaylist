@@ -10,12 +10,9 @@ const App = () => {
   const [playlistName, setPlaylistName] = useState("New Playlist");
   const [playlistTracks, setPlaylistTracks] = useState([]);
 
-  const addTrack = useCallback(
-    (track) => {
+  const addTrack = useCallback((track) => {
       if (playlistTracks.some((savedTrack) => savedTrack.id === track.id))
-        return;
-
-      setPlaylistTracks((prevTracks) => [...prevTracks, track]);
+        return; setPlaylistTracks((prevTracks) => [...prevTracks, track]);
     },
     [playlistTracks]
   );
@@ -24,7 +21,8 @@ const App = () => {
     setPlaylistTracks((prevTracks) =>
       prevTracks.filter((currentTrack) => currentTrack.id !== track.id)
     );
-  }, []);
+  }, []
+  );
 
   const updatePlaylistName = useCallback((name) => {
     setPlaylistName(name);
@@ -45,7 +43,7 @@ const App = () => {
   return (
     <div>
       <h1>
-        Sla<span className="highlight">yl</span>ist
+        Sla<span className="highlight">yL</span>ist
       </h1>
       <div className="App">
         <SearchBar onSearch={search} />

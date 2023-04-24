@@ -6,8 +6,8 @@
   
   .Track-action {
     cursor: pointer;
-    padding: .5rem;
-    font-size: 1.05rem;
+    padding: .50rem;
+    font-size: 1.10rem;
     transition: color .25s;
     border: 0px;
     background-color: rgba(0, 0, 0, 0);
@@ -27,11 +27,11 @@
   }
   
   .Track-information h3 {
-    margin-bottom: .22rem;
+    margin-bottom: .25rem;
   }
   
   .Track-information p {
-    font-size: .83rem;
+    font-size: .85rem;
     font-weight: 300;
-    color: rgba(256, 256, 256, 0.8);
+    color: rgba(270, 270, 270, 0.8);
   }

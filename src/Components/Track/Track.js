@@ -24,10 +24,10 @@ const Track = (props) => {
         </button>
       );
     }
-    return (
-      <button className="Track-action" onClick={addTrack}>
-        +
-      </button>
+      return (
+        <button className="Track-action" onClick={addTrack}>
+          +
+        </button>
     );
   };
 

@@ -3,8 +3,7 @@ import "./Playlist.css";
 import TrackList from "../TrackList/TrackList";
 
 const Playlist = (props) => {
-  const handleNameChange = useCallback(
-    (event) => {
+  const handleNameChange = useCallback((event) => {
       props.onNameChange(event.target.value);
     },
     [props.onNameChange]
