@@ -1,5 +1,5 @@
 const clientId = "5b53e27155824e289fa0e3318450aca7"
-const redirectUri = "http://localhost:3000/"
+const redirectUri = "https://slaylist.netlify.app/"
 let accessToken;
 
 const Spotify = {
