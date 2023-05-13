@@ -1,7 +1,12 @@
 import React from "react";
 import "./TrackList.css";
+
+// Track is imported to be inserted into the TrackList component.
+
 import Track from "../Track/Track"
 
+// The TrackList component renders the track list, using the 'map' method to iterate through each track.
+// For each track, a 'Track' component is rendered with the approppriate properties.
 
 const TrackList = (props) => {
   return (
