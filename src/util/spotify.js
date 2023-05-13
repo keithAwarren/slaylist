@@ -75,8 +75,7 @@ const Spotify = {
     // This function saves the playlist to the user's Spotify account.
     // It takes in a name for the playlist and an array of track URIs.
     // If the name or track URIs are missing, the function returns.
-    // Otherwise, it retrieves the access token from Spotify using the
-    // getAccessToken() method and sets up the headers for the API request.
+    // Otherwise, it retrieves the access token from Spotify using the getAccessToken() method and sets up the headers for the API request.
     // It then sends a request to get the user's ID and creates a new playlist with the given name. 
     // Finally, it adds the tracks to the newly created playlist.
   
