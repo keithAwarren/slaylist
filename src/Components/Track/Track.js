@@ -3,7 +3,7 @@ import "./Track.css";
 
 const Track = (props) => {
   
-  // addTrack calls the onAdd function passed in through props, passing the current track as an argument.
+  // addTrack calls the onAdd function passed in through props, passing the current track as its argument.
   
   const addTrack = useCallback(
     (event) => {
@@ -12,7 +12,7 @@ const Track = (props) => {
     [props.onAdd, props.track]
   );
   
-  // removeTrack calls the onRemove function passed in through props, passing the current track as an argument.
+  // removeTrack calls the onRemove function passed in through props, passing the current track as its argument.
 
   const removeTrack = useCallback(
     (event) => {
